@@ -1,28 +1,21 @@
-* =outline-ivy=
+* =counsel-outline=
 
-This repository serves as a mirror of /ekaschalk/'s excellent package [[https://github.com/ekaschalk/.spacemacs.d/blob/master/layers/personal/local/outline-ivy/outline-ivy.el][outline-ivy]].
-The mirror was created due to the lack of any official, standalone repository
-for =outline-ivy=.
+This repository is derived from /jocap/'s package [[https://github.com/jocap/outline-ivy-mirror][outline-ivy-mirror]], which is a fork of /ekaschalk/'s excellent package [[https://github.com/ekaschalk/.spacemacs.d/blob/master/layers/personal/local/outline-ivy/outline-ivy.el][outline-ivy]]. I encountered some bugs in the jocap fork which hadn't been touched in seven years, and decided to rename it to better fit with other similar packages which use =ivy=.
 
-Any further commits will probably contain my own, personal changes. Also there
-is no guarantee that this repository is kept up-to-date with /ekaschalk/'s
-version.
-
-** Installation
+* Installation
 
 The easiest way to install is through [[https://github.com/jwiegley/use-package][use-package]]:
 
 #+BEGIN_SRC emacs-lisp
-(use-package outline-ivy
+(use-package counsel-outline
   :ensure nil
-  :load-path "packages/outline-ivy"
+  :load-path "packages/counsel-outline"
   :bind (:map outline-minor-mode-map
-              ("s-o" . oi-jump)))
+              ("C-c o" . counsel-outline-jump)))
 #+END_SRC
 
 Above is my personal configuration. Adjust it to suit your needs.
 
 ** License
 
-Like /ekaschalk/'s original code, it is licensed under the MIT license. (See
-=LICENSE= file.)
+Like /jocap/ and /ekaschalk/'s original code, it is licensed under the MIT license. (See =LICENSE= file.)
